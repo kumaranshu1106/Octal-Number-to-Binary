@@ -19,7 +19,15 @@ long octalToBinary(int octalnum)
     //i is re-initialized
     i = 1;
 
-  
+    /* This loop converts the decimal number "decimalnum" to the binary
+     * number "binarynum"
+     */
+    while (decimalnum != 0)
+    {
+	binarynum = binarynum + (decimalnum % 2) * i;
+	decimalnum = decimalnum / 2;
+	i = i * 10;
+    }
 
     //Returning the binary number that we got from octal number
     return binarynum;
